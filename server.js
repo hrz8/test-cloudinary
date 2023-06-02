@@ -5,9 +5,9 @@ const Cloudinary = require('cloudinary').v2;
 const app = express();
 
 Cloudinary.config({
-    cloud_name: "dpnlopuki",
-    api_key: "413336792591126",
-    api_secret: "EDMduukUNQVBbMFKXuqoKU2enns"
+    cloud_name: process.env.CLOUD_NAME,
+    api_key: process.env.API_KEY,
+    api_secret: process.env.API_SECRET
 });
 
 app.use(upload());
